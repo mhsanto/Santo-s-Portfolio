@@ -15,12 +15,15 @@ const CoverImage = () => {
       height: 100%;
       object-fit: cover;
     }
+    img {
+      height: 100%;
+    }
   `;
   const DarkOverlay = styled.div`
     position: absolute;
     inset: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.1);
   `;
   const Title = styled(motion.div)`
     position: absolute;
@@ -35,15 +38,35 @@ const CoverImage = () => {
       display: flex;
     }
     h1 {
-      font-size: 6rem;
+      font-size: 5.6rem;
       text-shadow: 1px 1px 1px #202020;
     }
     h2 {
       text-align: center;
       font-family: "Kaushan Script";
       text-shadow: 1px 1px 1px #202020;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      color: crimson;
     }
+  `;
+  const HeaderTwo = styled.span`
+    font-size: 1.82rem;
+    position: absolute;
+    top: 5rem;
+    left: 25rem;
+    background-color: #202020;
+    width: 14rem;
+    height: 5rem;
+    padding: 0 1rem;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      38% 75%,
+      9% 100%,
+      26% 75%,
+      0% 75%
+    );
   `;
   const container = {
     hidden: {
@@ -78,7 +101,15 @@ const CoverImage = () => {
             data-scroll-delay="0.13"
             data-scroll-speed="4"
           >
-            Front
+            Fro
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.1"
+            data-scroll-speed="4"
+          >
+            nt
           </motion.h1>
           <motion.h1
             variants={item}
@@ -93,23 +124,35 @@ const CoverImage = () => {
             data-scroll
             data-scroll-delay="0.06"
             data-scroll-speed="4"
+            style={{ fontFamily: "Kaushan Script" }}
           >
-            Deve
+            De
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.08"
+            data-scroll-speed="4"
+            style={{ fontFamily: "Kaushan Script" }}
+          >
+            ve
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
             data-scroll-delay="0.04"
             data-scroll-speed="4"
+            style={{ fontFamily: "Kaushan Script" }}
           >
-            loper
+            Loper
           </motion.h1>
         </div>
-        <h2 data-scroll data-scroll-speed="4">
+        <motion.h2 variants={item} data-scroll data-scroll-speed="4">
           Mahmodul Hasan Santo
-        </h2>
+        </motion.h2>
       </Title>
-      <img src={videl} alt="" />
+      <img data-scroll data-scroll-speed="2" src={videl} alt="" />
+      <HeaderTwo>Why Not Fullstack</HeaderTwo>
       {/* <video src={Image} autoPlay loop muted /> */}
     </ImageContainer>
   );

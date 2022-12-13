@@ -5,7 +5,10 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Home from "./sections/Home";
+import About from "./sections/About";
 import { AnimatePresence } from "framer-motion";
+import Projects from "./sections/Projects";
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 
 function App() {
   const containerRef = useRef(null);
@@ -17,7 +20,6 @@ function App() {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
-            // ... all available Locomotive Scroll instance options
           }}
           watch={
             [
@@ -28,9 +30,12 @@ function App() {
           }
           containerRef={containerRef}
         >
+          <ScrollTriggerProxy />
           <AnimatePresence>
-            <main data-scroll-container ref={containerRef}>
+            <main className="App" data-scroll-container ref={containerRef}>
               <Home />
+              <About />
+              <Projects />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>
