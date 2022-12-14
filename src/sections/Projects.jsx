@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import img1 from "../assets/Images/1.webp";
+import img1 from "../assets/Images/ecommerce.png";
+import img2 from "../assets/Images/hunt.png";
+import img3 from "../assets/Images/portfolio.png";
+import img4 from "../assets/Images/reactPortfolio.png";
+import img5 from "../assets/Images/socialSiteImg.png";
 import React, { useLayoutEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import styled from "styled-components";
@@ -75,17 +79,31 @@ const Item = styled(motion.div)`
   display: inline-block;
   width: 20rem;
   margin-right: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  h1 {
+
+  a {
+    color: white;
+    font-size: 1.4rem;
+    text-transform: capitalize;
     font-weight: 500;
     text-align: center;
   }
 `;
-const Project = ({ img, title = `` }) => {
+const ImageHover = styled(motion.div)`
+  height: 30rem;
+  overflow: hidden;
+  border: 2px solid;
+`;
+const Img = styled(motion.img)`
+  width: 100%;
+  object-fit: cover;
+  transition: 1s ease;
+`;
+const Project = ({ img, href, title = "" }) => {
   return (
     <Item
       initial={{ filter: "grayscale(100%)" }}
@@ -93,8 +111,12 @@ const Project = ({ img, title = `` }) => {
       transition={{ duration: 0.05 }}
       viewport={{ once: false, amount: "all" }}
     >
-      <img src={img} alt={title} />
-      <h1>{title}</h1>
+      <ImageHover>
+        <Img whileHover={{ translate: "0 -55%" }} src={img} alt={title} />
+      </ImageHover>
+      <a href={href} target="_blank">
+        {title}
+      </a>
     </Item>
   );
 };
@@ -135,7 +157,10 @@ const Projects = () => {
       });
       ScrollTrigger.refresh();
     }, 1000);
-    return () => {};
+    return () => {
+      t1.kill();
+      ScrollTrigger.kill();
+    };
   });
   return (
     <Section ref={ref}>
@@ -219,16 +244,31 @@ const Projects = () => {
         </Flex>
       </Left>
       <Right ref={horizontalRef}>
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
-        <Project img={img1} title="view my work" />
+        <Project
+          img={img1}
+          title="view my work"
+          href="https://mhsanto.github.io/E-commerce-website/"
+        />
+        <Project
+          img={img2}
+          title="view my work"
+          href="https://sajjadul011.github.io/Hunt-Potfolio/"
+        />
+        <Project
+          img={img3}
+          title="view my work"
+          href="https://mhsanto.github.io/portFolioTesting/"
+        />
+        <Project
+          img={img4}
+          title="view my work"
+          href="https://santo-react-portfolio.netlify.app/"
+        />
+        <Project
+          img={img5}
+          title="view my work"
+          href="https://mhsanto.github.io/mySocialMedia/"
+        />
       </Right>
     </Section>
   );
