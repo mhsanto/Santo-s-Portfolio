@@ -11,7 +11,7 @@ const Home = () => {
     overflow: hidden;
   `;
   return (
-    <Section>
+    <Section id="home">
       <CoverImage />
       <Logo />
       <Navbar />

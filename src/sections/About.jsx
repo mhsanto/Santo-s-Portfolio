@@ -1,18 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import cv from "../assets/Images/Santo-CV.pdf";
-import img1 from "../assets/Images/1.webp";
-import img2 from "../assets/Images/2.webp";
-import img3 from "../assets/Images/3.webp";
+import img1 from "../assets/Images/fullmetal.svg";
+import img2 from "../assets/Images/me.jpg";
+import img3 from "../assets/Images/santo.jpg";
 import { motion } from "framer-motion";
 
-const Home = () => {
+const About = () => {
   const Section = styled.section`
     position: relative;
     min-height: 100vh;
     width: 90vw;
     display: flex;
     margin: 0 auto;
+    @media (max-width: 48em) {
+      width: 90vw;
+    }
+    @media (max-width: 30em) {
+      width: 100vw;
+    }
   `;
   const Title = styled.h1`
     position: absolute;
@@ -22,6 +28,14 @@ const Home = () => {
     font-weight: 300;
     font-family: "Kaushan Script";
     z-index: 4;
+    @media (max-width: 64em) {
+      font-size: calc(5em - 5vw);
+      left: 0;
+      top: 0;
+    }
+    @media (max-width: 48em) {
+      font-size: 4rem;
+    }
   `;
   const Left = styled.div`
     font-size: 1.2rem;
@@ -31,7 +45,25 @@ const Home = () => {
     z-index: 5;
     margin-top: 20%;
     text-transform: capitalize;
-    overflow: hidden;
+    @media (max-width: 64em) {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) !important;
+      margin: 0 auto;
+      padding: 2rem;
+      font-weight: 600;
+      backdrop-filter: blur(2px);
+      background-color: rgb(255, 255, 255, 0.3);
+      border-radius: 20px;
+    }
+    @media (max-width: 48em) {
+      font-size: 1rem;
+    }
+    @media (max-width: 30em) {
+      width: 70%;
+    }
   `;
   const Right = styled.div`
     width: 50%;
@@ -42,7 +74,7 @@ const Home = () => {
     }
     .small-img-1 {
       position: absolute;
-      right: 95%;
+      right: 75%;
       bottom: 15%;
       width: 40%;
     }
@@ -51,6 +83,27 @@ const Home = () => {
       left: 80%;
       bottom: 30%;
       width: 40%;
+    }
+    @media (max-width: 64em) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        object-fit: cover;
+      }
+      .small-img-1 {
+        width: 30%;
+        left: 5%;
+        height: auto;
+        bottom: 10%;
+      }
+      .small-img-2 {
+        width: 30%;
+        height: auto;
+        left: 60%;
+        bottom: 20%;
+      }
     }
   `;
   const CV = styled(motion.a)`
@@ -65,7 +118,7 @@ const Home = () => {
     letter-spacing: 2px;
   `;
   return (
-    <Section id="fixed-text">
+    <Section id="fixed-text" className="about">
       <Title
         data-scroll
         data-scroll-speed="-2"
@@ -117,4 +170,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

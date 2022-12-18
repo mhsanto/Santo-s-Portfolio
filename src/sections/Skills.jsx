@@ -18,7 +18,7 @@ const Section = styled.section`
 `;
 const Overlay = styled.div`
   position: absolute;
-  width: 27vw;
+  width: 32vw;
   height: 90vh;
   top: 50%;
   left: 50%;
@@ -26,6 +26,21 @@ const Overlay = styled.div`
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 5vw #fff;
   z-index: 6;
+  @media (max-width: 70em) {
+    width: 40vw;
+    height: 80vh;
+  }
+  @media (max-width: 64em) {
+    width: 50vw;
+    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+  }
+  @media (max-width: 48em) {
+    width: 60vw;
+  }
+  @media (max-width: 30em) {
+    width: 80vw;
+    height: 60vh;
+  }
 `;
 const Title = styled.h1`
   position: absolute;
@@ -37,6 +52,12 @@ const Title = styled.h1`
   font-family: "Kaushan Script";
   color: #323232;
   z-index: 8;
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
+  @media (max-width: 48em) {
+    font-size: 4.5rem;
+  }
 `;
 const Container = styled.div`
   position: absolute;
@@ -48,6 +69,15 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 64em) {
+    width: 30vw;
+  }
+  @media (max-width: 48em) {
+    width: 40vw;
+  }
+  @media (max-width: 30em) {
+    width: 60vw;
+  }
 `;
 const Item = styled.div`
   display: flex;
@@ -57,8 +87,8 @@ const Item = styled.div`
   margin: 4rem 0;
 
   img {
-    width: 100%;
-    z-index: 5;
+    width: 90%;
+    z-index: 4;
     height: auto;
   }
   h2 {
@@ -117,7 +147,7 @@ const Skills = () => {
     };
   }, []);
   return (
-    <Section ref={ref}>
+    <Section ref={ref} id="skills">
       <Overlay />
       <Title
         data-scroll

@@ -27,6 +27,14 @@ const Title = styled.h1`
   font-family: "Kaushan Script";
   color: crimson;
   z-index: 8;
+  @media (max-width: 64em) {
+    font-size: calc(5rem-2vw);
+    left: 0;
+    top: 0;
+  }
+  @media (max-width: 48em) {
+    font-size: 3rem;
+  }
 `;
 const Left = styled.div`
   width: 35%;
@@ -34,9 +42,13 @@ const Left = styled.div`
   min-height: 100vh;
   z-index: 5;
   position: fixed;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 64em) {
+    width: 20%;
+  }
 `;
 const Flex = styled.div`
   margin-top: 10rem;
@@ -48,6 +60,20 @@ const Flex = styled.div`
   font-size: 0.95rem;
   h3 {
     font-weight: 300;
+  }
+  @media (max-width: 64em) {
+    h3 {
+      font-size: ${(props) => props.theme.fontmd};
+    }
+    a {
+      display: none;
+    }
+  }
+  @media (max-width: 48em) {
+    width: 40%;
+    h3 {
+      display: none;
+    }
   }
 `;
 const Tag = styled(motion.a)`
@@ -62,7 +88,7 @@ const Tag = styled(motion.a)`
 `;
 const Right = styled.div`
   position: absolute;
-  background-color: rgb(50, 103, 95);
+  background-color: rgb(44, 70, 57);
   /* width: 65%; */
   left: 35%;
   padding-left: 30%;
@@ -73,6 +99,9 @@ const Right = styled.div`
   h1 {
     width: 5rem;
     margin: 0 2rem;
+  }
+  @media (max-width: 64em) {
+    left: 20%;
   }
 `;
 const Item = styled(motion.div)`
@@ -92,11 +121,14 @@ const Item = styled(motion.div)`
     font-weight: 500;
     text-align: center;
   }
+  @media (max-width: 48em) {
+    width: 15rem;
+  }
 `;
 const ImageHover = styled(motion.div)`
   height: 30rem;
   overflow: hidden;
-  border: 2px solid;
+  border: 1px solid rgb(255, 121, 79);
 `;
 const Img = styled(motion.img)`
   width: 100%;
@@ -163,7 +195,7 @@ const Projects = () => {
     };
   });
   return (
-    <Section ref={ref}>
+    <Section ref={ref} id="projects">
       <Title data-scroll data-scroll-speed="-1">
         Selected Works
       </Title>

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/kaushan-script";
 import "@fontsource/sirin-stencil";
+import "@fontsource/dancing-script"
 const GlobalStyles = createGlobalStyle`
 *,*::after,*::before{
     padding: 0;

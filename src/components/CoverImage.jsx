@@ -1,6 +1,5 @@
 import React from "react";
 import videl from "../assets/Svgs/1670796076gravure-dragon-ball-videl-u-need-me-3.svg";
-import Image from "../assets/Walking Girl.mp4";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -10,13 +9,15 @@ const CoverImage = () => {
     width: 100%;
     position: relative;
     background-color: #131313;
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+
     img {
       height: 100%;
+      @media (max-width: 40em) {
+        width: 60%;
+        position: absolute;
+        top: 12rem;
+        transform: none !important;
+      }
     }
   `;
   const DarkOverlay = styled.div`
@@ -38,8 +39,15 @@ const CoverImage = () => {
       display: flex;
     }
     h1 {
-      font-size: 5.6rem;
+      font-size: 6.6rem;
       text-shadow: 1px 1px 1px #202020;
+      @media (max-width: 64em) {
+        font-size: ${(props) => props.theme.fontxxl};
+      }
+      @media (max-width: 30em) {
+        font-size: calc(1rem + 7vw);
+        object-position: center;
+      }
     }
     h2 {
       text-align: center;
@@ -47,6 +55,10 @@ const CoverImage = () => {
       text-shadow: 1px 1px 1px #202020;
       font-size: 2rem;
       color: crimson;
+      @media (max-width: 30em) {
+        font-size: calc(1rem + 2.2vw);
+        object-position: center;
+      }
     }
   `;
   const HeaderTwo = styled.span`
@@ -57,7 +69,7 @@ const CoverImage = () => {
     background-color: #202020;
     width: 14rem;
     height: 5rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     clip-path: polygon(
       0% 0%,
       100% 0%,
@@ -67,6 +79,13 @@ const CoverImage = () => {
       26% 75%,
       0% 75%
     );
+    @media (max-width: 40em) {
+      font-size: 1rem;
+      width: 8rem;
+      height: 4rem;
+      top: 25rem;
+      left: 12rem;
+    }
   `;
   const container = {
     hidden: {

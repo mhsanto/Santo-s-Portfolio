@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/dancing-script": "^4.5.10",
     "@fontsource/kaushan-script": "^4.5.10",
     "@fontsource/sirin-stencil": "^4.5.8",
     "framer-motion": "^7.6.19",

@@ -1,6 +1,6 @@
 let eyeBall = document.getElementsByClassName("ball");
 
- export default document.onmousemove = function () {
+document.onmousemove = function () {
   let x = (event.clientX * 100) / window.innerWidth + "%";
   var y = (event.clientY * 100) / window.innerHeight + "%";
 

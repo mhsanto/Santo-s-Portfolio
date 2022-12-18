@@ -11,6 +11,7 @@ import Projects from "./sections/Projects";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Extra from "./sections/Extra";
 import Skills from "./sections/Skills";
+import Footer from "./sections/Footer";
 
 function App() {
   const containerRef = useRef(null);
@@ -22,6 +23,12 @@ function App() {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
+            smartphone: {
+              smooth: true,
+            },
+            tablet: {
+              smooth: true,
+            },
           }}
           watch={
             [
@@ -38,8 +45,9 @@ function App() {
               <Home />
               <About />
               <Projects />
-              <Extra />
               <Skills />
+              <Extra />
+              <Footer />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>
