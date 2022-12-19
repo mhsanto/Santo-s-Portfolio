@@ -8,7 +8,8 @@ const CoverImage = () => {
     height: 100vh;
     width: 100%;
     position: relative;
-    background-color: #131313;
+    background-color: #999ea8;
+    color: #000000;
 
     img {
       height: 100%;
@@ -32,7 +33,6 @@ const CoverImage = () => {
     z-index: 5;
     display: flex;
     flex-direction: column;
-    color: white;
     justify-content: center;
     align-items: center;
     div {
@@ -42,7 +42,7 @@ const CoverImage = () => {
       font-size: 6.6rem;
       text-shadow: 1px 1px 1px #202020;
       @media (max-width: 64em) {
-        font-size: ${(props) => props.theme.fontxxl};
+        font-size: calc(5vw + 1rem);
       }
       @media (max-width: 30em) {
         font-size: calc(1rem + 7vw);
@@ -53,7 +53,7 @@ const CoverImage = () => {
       text-align: center;
       font-family: "Kaushan Script";
       text-shadow: 1px 1px 1px #202020;
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: crimson;
       @media (max-width: 30em) {
         font-size: calc(1rem + 2.2vw);
@@ -66,8 +66,9 @@ const CoverImage = () => {
     position: absolute;
     top: 5rem;
     left: 25rem;
-    background-color: #202020;
-    width: 14rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #999ea8;
+    width: 18rem;
     height: 5rem;
     padding: 1rem 1rem;
     clip-path: polygon(
@@ -170,8 +171,8 @@ const CoverImage = () => {
           Mahmodul Hasan Santo
         </motion.h2>
       </Title>
-      <img data-scroll data-scroll-speed="2" src={videl} alt="" />
-      <HeaderTwo>Why Not Fullstack</HeaderTwo>
+      <img data-scroll data-scroll-speed="-2" src={videl} alt="" />
+      <HeaderTwo>Why Not Fullstack Dev</HeaderTwo>
       {/* <video src={Image} autoPlay loop muted /> */}
     </ImageContainer>
   );

@@ -9,8 +9,12 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   align-items: center;
-  background-color: black;
+  background-color: #000000;
+  color: #f2ff91;
+  font-family: "Roboto";
+  text-transform: uppercase;
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -20,16 +24,13 @@ const LogoContainer = styled.div`
 
   h2 {
     font-size: 4.5rem;
-    color: white;
     @media (max-width: 48em) {
-      font-size: ${(props) => props.theme.fontxl};
+      font-size: 1.4rem;
     }
   }
 `;
 const Span = styled.span`
-  color: white;
-  font-family: "Kaushan Script";
-  font-size: 2rem;
+  font-size: 1.2rem;
   border: 1px solid;
   padding: 1rem 2rem;
   border-radius: 30px;
@@ -58,7 +59,6 @@ const FooterLinks = styled(motion.div)`
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     list-style: none;
-    color: white;
     font-size: 1.6rem;
     @media (max-width: 48em) {
       justify-content: center;
@@ -78,9 +78,10 @@ const FooterLinks = styled(motion.div)`
   }
 `;
 const Link = styled.a`
-  color: white;
   position: absolute;
-  font-size: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
   left: 1rem;
   top: 1rem;
   border-bottom: 2px solid;
@@ -89,9 +90,10 @@ const Link = styled.a`
   }
 `;
 const Link2 = styled.a`
-  color: white;
   position: absolute;
-  font-size: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
   right: 1rem;
   border-bottom: 2px solid;
   top: 1rem;
@@ -100,10 +102,11 @@ const Link2 = styled.a`
   }
 `;
 const Link3 = styled.a`
-  color: white;
   position: absolute;
   bottom: 2.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
   border-bottom: 2px solid;
   left: 1rem;
   @media (max-width: 48em) {
@@ -111,9 +114,10 @@ const Link3 = styled.a`
   }
 `;
 const Link4 = styled.a`
-  color: white;
   position: absolute;
-  font-size: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
   bottom: 2.5rem;
   border-bottom: 2px solid;
   right: 1rem;
@@ -124,7 +128,6 @@ const Link4 = styled.a`
 const Copyright = styled.span`
   padding: 0.5rem 0;
   margin: 0 4rem;
-  font-size: ${(props) => props.theme.fontlg};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,8 +138,7 @@ const Copyright = styled.span`
     margin: 0;
   }
   p {
-    color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
 
     @media (max-width: 48em) {
       font-size: 0.9rem;
@@ -175,7 +177,6 @@ const Footer = () => {
           Let's talk about your project
         </h2>
         <Span>
-          {" "}
           <a
             href="https://www.facebook.com/messages/t/100004883266236"
             target="_blank"

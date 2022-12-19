@@ -36,7 +36,9 @@ const MenuItems = styled(motion.ul)`
   }
 `;
 const ListItem = styled(motion.li)`
-  font-size: 1.7rem;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 700;
   background-color: rgb(155, 155, 155);
   list-style: none;
   color: ${(props) => props.theme.fontmd};
@@ -49,11 +51,11 @@ const ListItem = styled(motion.li)`
   justify-content: center;
   align-items: center;
   clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  padding: 0.1rem 5rem;
+  padding: 0.4rem 5rem;
   @media (max-width: 40em) {
     width: 3rem;
     height: 2.2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: black;
     font-weight: 700;
   }
@@ -92,7 +94,7 @@ const Navbar = () => {
       >
         <ListItem className="eye" onClick={() => setClick(!click)}>
           <span className="ball"></span>
-          Pull
+          MENU
         </ListItem>
         <MenuBtns
           onClick={() => handleScroll(".about")}

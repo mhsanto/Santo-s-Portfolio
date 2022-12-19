@@ -88,7 +88,7 @@ const Tag = styled(motion.a)`
 `;
 const Right = styled.div`
   position: absolute;
-  background-color: rgb(44, 70, 57);
+  background-color: #566270;
   /* width: 65%; */
   left: 35%;
   padding-left: 30%;

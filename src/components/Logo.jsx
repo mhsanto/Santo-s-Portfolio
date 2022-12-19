@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Container = styled.div`
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 2rem;
   width: 100%;
   z-index: 5;
   color: white;
@@ -13,20 +13,9 @@ const Container = styled.div`
     display: flex;
     align-items: flex-end;
   }
-  svg {
-    width: 4rem;
-    height: auto;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    g {
-      path {
-        stroke: #fff;
-      }
-    }
-  }
 `;
 const Title = styled(motion.span)`
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding-bottom: 0.5rem;
   @media (max-width: 40em) {
     font-size: 1.31rem;

@@ -7,6 +7,8 @@ import CSS from "../assets/Images/CssBigImg.png";
 import Bootstrap from "../assets/Images/bootstrap.png";
 import Javascript from "../assets/Images/javascriptBIg.png";
 import ReactJs from "../assets/Images/ReactBig.png";
+import SAAS from "../assets/Images/sass-1.svg";
+import GSAP from "../assets/Images/gsap-greensock.svg";
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
@@ -18,7 +20,7 @@ const Section = styled.section`
 `;
 const Overlay = styled.div`
   position: absolute;
-  width: 32vw;
+  width: 27vw;
   height: 90vh;
   top: 50%;
   left: 50%;
@@ -63,7 +65,7 @@ const Container = styled.div`
   position: absolute;
   top: 0;
   left: 50%;
-  width: 25vw;
+  width: 17vw;
   transform: translate(-50%, 0);
   display: flex;
   flex-direction: column;
@@ -162,6 +164,8 @@ const Skills = () => {
         <Project img={Bootstrap} title="BootStrap" />
         <Project img={Javascript} title="Javascript ES5,ES6" />
         <Project img={ReactJs} title="REACT 17" />
+        <Project img={SAAS} title="SASS 17" />
+        <Project img={GSAP} title="GSAP 17" />
       </Container>
     </Section>
   );

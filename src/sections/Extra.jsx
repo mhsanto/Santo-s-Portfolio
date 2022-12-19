@@ -4,6 +4,7 @@ const Section = styled.section`
   min-height: 100vh;
   position: relative;
   display: flex;
+  background-color: #f4effc;
   justify-content: center;
   align-items: center;
   margin-inline: auto;

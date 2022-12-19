@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import cv from "../assets/Images/Santo-CV.pdf";
-import img1 from "../assets/Images/fullmetal.svg";
 import img2 from "../assets/Images/me.jpg";
 import img3 from "../assets/Images/santo.jpg";
 import { motion } from "framer-motion";
@@ -39,11 +38,10 @@ const About = () => {
   `;
   const Left = styled.div`
     font-size: 1.2rem;
-    line-height: 1.5;
     width: 50%;
     position: relative;
     z-index: 5;
-    margin-top: 20%;
+    margin-top: 16%;
     text-transform: capitalize;
     @media (max-width: 64em) {
       width: 80%;
@@ -74,13 +72,13 @@ const About = () => {
     }
     .small-img-1 {
       position: absolute;
-      right: 75%;
+      right: 47%;
       bottom: 15%;
       width: 40%;
     }
     .small-img-2 {
       position: absolute;
-      left: 80%;
+      left: 59%;
       bottom: 30%;
       width: 40%;
     }
@@ -150,7 +148,6 @@ const About = () => {
         </CV>
       </Left>
       <Right>
-        <img src={img1} alt="My image" />
         <img
           src={img2}
           data-scroll
