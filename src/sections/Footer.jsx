@@ -136,6 +136,7 @@ const Copyright = styled.span`
     justify-content: center;
     width: 100%;
     margin: 0;
+    text-align: center;
   }
   p {
     font-size: 1.2rem;

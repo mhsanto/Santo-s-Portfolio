@@ -7,6 +7,7 @@ const Section = styled.section`
   background-color: #f4effc;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   margin-inline: auto;
   @media (max-width: 48em) {
     width: 90vw;

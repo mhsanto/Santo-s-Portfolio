@@ -9,6 +9,7 @@ import Javascript from "../assets/Images/javascriptBIg.png";
 import ReactJs from "../assets/Images/ReactBig.png";
 import SAAS from "../assets/Images/sass-1.svg";
 import GSAP from "../assets/Images/gsap-greensock.svg";
+import Materialui from "../assets/Images/Materialui.png";
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
@@ -166,6 +167,7 @@ const Skills = () => {
         <Project img={ReactJs} title="REACT 17" />
         <Project img={SAAS} title="SASS 17" />
         <Project img={GSAP} title="GSAP 17" />
+        <Project img={Materialui} title="Material UI" />
       </Container>
     </Section>
   );
