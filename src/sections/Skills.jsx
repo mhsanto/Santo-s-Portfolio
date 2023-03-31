@@ -7,6 +7,7 @@ import CSS from "../assets/Images/CssBigImg.png";
 import Bootstrap from "../assets/Images/bootstrap.png";
 import Javascript from "../assets/Images/javascriptBIg.png";
 import ReactJs from "../assets/Images/ReactBig.png";
+import Redux from "../assets/Images/redux-icon.png";
 import SAAS from "../assets/Images/sass-1.svg";
 import GSAP from "../assets/Images/gsap-greensock.svg";
 import Materialui from "../assets/Images/Materialui.png";
@@ -56,7 +57,8 @@ const Title = styled.h1`
   color: #323232;
   z-index: 8;
   @media (max-width: 64em) {
-    font-size: ${(props) => props.theme.fontxxl};
+    font-size: calc(5em - 1vw);
+    left: 3%;
   }
   @media (max-width: 48em) {
     font-size: 4.5rem;
@@ -165,6 +167,7 @@ const Skills = () => {
         <Project img={Bootstrap} title="BootStrap" />
         <Project img={Javascript} title="Javascript ES5,ES6" />
         <Project img={ReactJs} title="REACT 17" />
+        <Project img={Redux} title="Redux" />
         <Project img={SAAS} title="SASS 17" />
         <Project img={GSAP} title="GSAP 17" />
         <Project img={Materialui} title="Material UI" />

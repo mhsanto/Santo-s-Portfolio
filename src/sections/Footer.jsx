@@ -27,6 +27,9 @@ const LogoContainer = styled.div`
     @media (max-width: 48em) {
       font-size: 1.4rem;
     }
+    @media (max-width: 64em) {
+      font-size: 3.5rem;
+    }
   }
 `;
 const Span = styled.span`

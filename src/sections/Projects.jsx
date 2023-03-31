@@ -21,14 +21,15 @@ const Title = styled.h1`
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 7.5rem;
+  font-size: calc(5em - 1vw);
+
   font-weight: 300;
   text-shadow: 1px 1px 1px #202020;
   font-family: "Kaushan Script";
   color: crimson;
   z-index: 8;
   @media (max-width: 64em) {
-    font-size: calc(5rem-2vw);
+    font-size: calc(5rem-1vw);
     left: 0;
     top: 0;
   }

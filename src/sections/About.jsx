@@ -28,7 +28,7 @@ const About = () => {
     font-family: "Kaushan Script";
     z-index: 4;
     @media (max-width: 64em) {
-      font-size: calc(5em - 5vw);
+      font-size: calc(5em - 1vw);
       left: 0;
       top: 0;
     }
