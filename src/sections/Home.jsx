@@ -12,8 +12,8 @@ const Home = () => {
   `;
   return (
     <Section id="home">
-      <CoverImage />
       <Logo />
+      <CoverImage />
       <Navbar />
     </Section>
   );

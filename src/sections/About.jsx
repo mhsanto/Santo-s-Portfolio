@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import cv from "../assets/Images/Santo-CV.pdf";
+import cv from "../assets/Images/CV.pdf";
 import img2 from "../assets/Images/me.jpg";
 import img3 from "../assets/Images/santo.jpg";
 import { motion } from "framer-motion";
@@ -9,6 +9,7 @@ const About = () => {
   const Section = styled.section`
     position: relative;
     min-height: 100vh;
+
     width: 90vw;
     display: flex;
     margin: 0 auto;
@@ -104,6 +105,7 @@ const About = () => {
       }
     }
   `;
+
   const CV = styled(motion.a)`
     color: black;
     font-size: 1rem;
@@ -115,55 +117,58 @@ const About = () => {
     text-transform: uppercase;
     letter-spacing: 2px;
   `;
+
   return (
-    <Section id="fixed-text" className="about">
-      <Title
-        data-scroll
-        data-scroll-speed="-2"
-        data-scroll-direction="horizontal"
-      >
-        About Me
-      </Title>
-      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-text">
-        My full name is Mahmodul Hasan Santo.I am a passionate designer based in
-        Dhaka,Bangladesh.I am enthusiastic about learning,working hard and
-        solving problems with a clean and functional design.
-        <br />
-        <br />
-        I'm a Frontend developer who loves to help people get their dreams up
-        and running on the internet. I love to see people succeed with their
-        projects—whether they're just getting started or they've been working on
-        them for years
-        <br />
-        <CV
-          whileHover={{
-            border: "2px solid",
-            letterSpacing: "0px",
-            fontWeight: "600",
-          }}
-          href={cv}
-          download
-        >
-          View My CV
-        </CV>
-      </Left>
-      <Right>
-        <img
-          src={img2}
-          data-scroll
-          data-scroll-speed="5"
-          className="small-img-1"
-          alt="My image"
-        />
-        <img
-          src={img3}
+    <>
+      <Section id="fixed-text" className="about">
+        <Title
           data-scroll
           data-scroll-speed="-2"
-          className="small-img-2"
-          alt="My image"
-        />
-      </Right>
-    </Section>
+          data-scroll-direction="horizontal"
+        >
+          About Me
+        </Title>
+        <Left data-scroll data-scroll-target="#fixed-text">
+          My full name is Mahmodul Hasan Santo.I am a passionate designer based
+          in Dhaka,Bangladesh.I am enthusiastic about learning,working hard and
+          solving problems with a clean and functional design.
+          <br />
+          <br />
+          I'm a MERN Stack developer who loves to help people get their dreams
+          up and running on the internet. I love to see people succeed with
+          their projects—whether they're just getting started or they've been
+          working on them for years
+          <br />
+          <CV
+            whileHover={{
+              border: "2px solid",
+              letterSpacing: "0px",
+              fontWeight: "600",
+            }}
+            href={cv}
+            download
+          >
+            View My CV
+          </CV>
+        </Left>
+        <Right>
+          <img
+            src={img2}
+            data-scroll
+            data-scroll-speed="5"
+            className="small-img-1"
+            alt="My image"
+          />
+          <img
+            src={img3}
+            data-scroll
+            data-scroll-speed="-2"
+            className="small-img-2"
+            alt="My image"
+          />
+        </Right>
+      </Section>
+    </>
   );
 };
 

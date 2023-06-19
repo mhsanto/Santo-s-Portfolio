@@ -7,10 +7,14 @@ import CSS from "../assets/Images/CssBigImg.png";
 import Bootstrap from "../assets/Images/bootstrap.png";
 import Javascript from "../assets/Images/javascriptBIg.png";
 import ReactJs from "../assets/Images/ReactBig.png";
-import Redux from "../assets/Images/redux-icon.png";
+import Redux from "../assets/Images/redux.png";
 import SAAS from "../assets/Images/sass-1.svg";
 import GSAP from "../assets/Images/gsap-greensock.svg";
 import Materialui from "../assets/Images/Materialui.png";
+import Mongo from "../assets/Images/mongo.png";
+import Express from "../assets/Images/express.png";
+import Node from "../assets/Images/node.png";
+
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
@@ -89,7 +93,7 @@ const Item = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4rem 0;
+  margin: 3.5rem 0;
 
   img {
     width: 90%;
@@ -167,7 +171,10 @@ const Skills = () => {
         <Project img={Bootstrap} title="BootStrap" />
         <Project img={Javascript} title="Javascript ES5,ES6" />
         <Project img={ReactJs} title="REACT 17" />
-        <Project img={Redux} title="Redux" />
+        <Project img={Redux} title="Redux 17" />
+        <Project img={Node} title="NodeJS 17" />
+        <Project img={Express} title="Express JS" />
+        <Project img={Mongo} title="MONGO DB" />
         <Project img={SAAS} title="SASS 17" />
         <Project img={GSAP} title="GSAP 17" />
         <Project img={Materialui} title="Material UI" />
