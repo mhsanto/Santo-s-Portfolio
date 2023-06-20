@@ -23,13 +23,7 @@ const LogoContainer = styled.div`
   align-items: center;
 
   h2 {
-    font-size: 4.5rem;
-    @media (max-width: 48em) {
-      font-size: 1.4rem;
-    }
-    @media (max-width: 64em) {
-      font-size: 3.5rem;
-    }
+    font-size: clamp(1.38rem, calc(-0.17rem + 5.15vw), 4.5rem);
   }
 `;
 const Span = styled.span`

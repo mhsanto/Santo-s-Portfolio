@@ -1,5 +1,3 @@
-import React from "react";
-import videl from "../assets/Svgs/1670796076gravure-dragon-ball-videl-u-need-me-3.svg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -10,16 +8,6 @@ const CoverImage = () => {
     position: relative;
     background-color: #999ea8;
     color: #000000;
-
-    img {
-      height: 100%;
-      @media (max-width: 40em) {
-        width: 60%;
-        position: absolute;
-        top: 12rem;
-        transform: none !important;
-      }
-    }
   `;
   const DarkOverlay = styled.div`
     position: absolute;
@@ -39,13 +27,10 @@ const CoverImage = () => {
       display: flex;
     }
     h1 {
-      font-size: 6.6rem;
+      font-size: clamp(3rem, calc(1.22rem + 5.94vw), 6.6rem);
       text-shadow: 1px 1px 1px #202020;
-      @media (max-width: 64em) {
-        font-size: calc(5vw + 1rem);
-      }
+
       @media (max-width: 30em) {
-        font-size: calc(1rem + 7vw);
         object-position: center;
       }
     }
@@ -53,7 +38,7 @@ const CoverImage = () => {
       text-align: center;
       font-family: "Kaushan Script";
       text-shadow: 1px 1px 1px #202020;
-      font-size: 2.5rem;
+      font-size: clamp(1.75rem, calc(1.38rem + 1.24vw), 2.5rem);
       color: crimson;
       @media (max-width: 30em) {
         font-size: calc(1rem + 2.2vw);
@@ -171,9 +156,6 @@ const CoverImage = () => {
           Mahmodul Hasan Santo
         </motion.h2>
       </Title>
-      <img data-scroll data-scroll-speed="-2" src={videl} alt="" />
-      <HeaderTwo>Why Not Fullstack Dev</HeaderTwo>
-      {/* <video src={Image} autoPlay loop muted /> */}
     </ImageContainer>
   );
 };
