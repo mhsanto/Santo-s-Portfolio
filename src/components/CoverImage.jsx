@@ -1,181 +1,196 @@
-import React from "react";
-import videl from "../assets/Svgs/1670796076gravure-dragon-ball-videl-u-need-me-3.svg";
+import "@fontsource/poppins";
+
+import CV from "../assets/Images/CV.png";
+import cv from "../assets/Images/CV.pdf";
+
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import useRunAnimation from "../customHook/useRunAnimation";
+const ImageContainer = styled.section`
+  height: 100vh;
+  width: 100%;
+  position: relative;
+`;
+
+const Title = styled(motion.div)`
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: clamp(5.63rem, calc(3.59rem + 5.18vw), 6.56rem);
+    @media (max-width: 64em) {
+      font-size: calc(8vw + 1rem);
+    }
+    @media (max-width: 30em) {
+      font-size: calc(1rem + 7vw);
+      object-position: center;
+    }
+  }
+  h2 {
+    font-size: 2.1rem;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    font-weight: 700;
+    @media (max-width: 48em) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: 30em) {
+      font-size: calc(1rem + 2.2vw);
+      object-position: center;
+      margin-top: -0.1rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+  }
+`;
+const container = {
+  hidden: {
+    opacity: 0,
+    pathLength: 0,
+  },
+  visible: {
+    opacity: 1,
+
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.3,
+    },
+  },
+};
+const item = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 
 const CoverImage = () => {
-  const ImageContainer = styled.section`
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background-color: #999ea8;
-    color: #000000;
+  const animeRef = useRunAnimation();
 
-    img {
-      height: 100%;
-      @media (max-width: 40em) {
-        width: 60%;
-        position: absolute;
-        top: 12rem;
-        transform: none !important;
-      }
-    }
-  `;
-  const DarkOverlay = styled.div`
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.1);
-  `;
-  const Title = styled(motion.div)`
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    div {
-      display: flex;
-    }
-    h1 {
-      font-size: 6.6rem;
-      text-shadow: 1px 1px 1px #202020;
-      @media (max-width: 64em) {
-        font-size: calc(5vw + 1rem);
-      }
-      @media (max-width: 30em) {
-        font-size: calc(1rem + 7vw);
-        object-position: center;
-      }
-    }
-    h2 {
-      text-align: center;
-      font-family: "Kaushan Script";
-      text-shadow: 1px 1px 1px #202020;
-      font-size: 2.5rem;
-      color: crimson;
-      @media (max-width: 30em) {
-        font-size: calc(1rem + 2.2vw);
-        object-position: center;
-      }
-    }
-  `;
-  const HeaderTwo = styled.span`
-    font-size: 1.82rem;
-    position: absolute;
-    top: 5rem;
-    left: 25rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #999ea8;
-    width: 18rem;
-    height: 5rem;
-    padding: 1rem 1rem;
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 75%,
-      38% 75%,
-      9% 100%,
-      26% 75%,
-      0% 75%
-    );
-    @media (max-width: 40em) {
-      font-size: 1rem;
-      width: 8rem;
-      height: 4rem;
-      top: 25rem;
-      left: 12rem;
-    }
-  `;
-  const container = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-    },
-    visible: {
-      opacity: 1,
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = cv;
+    link.download = "MH CV";
+    link.click();
+  };
 
-      transition: {
-        delayChildren: 1,
-        staggerChildren: 0.3,
-      },
-    },
-  };
-  const item = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-    },
-  };
   return (
-    <ImageContainer>
-      <DarkOverlay />
-      <Title variants={container} initial="hidden" animate="visible">
-        <div>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.13"
-            data-scroll-speed="4"
-          >
-            Fro
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.1"
-            data-scroll-speed="4"
-          >
-            nt
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.09"
-            data-scroll-speed="4"
-          >
-            End
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.06"
-            data-scroll-speed="4"
-            style={{ fontFamily: "Kaushan Script" }}
-          >
-            De
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.08"
-            data-scroll-speed="4"
-            style={{ fontFamily: "Kaushan Script" }}
-          >
-            ve
-          </motion.h1>
-          <motion.h1
-            variants={item}
+    <>
+      <ImageContainer>
+        <Title variants={container} initial="hidden" animate="visible">
+          <div>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.13"
+              data-scroll-speed="4"
+              style={{ color: "#4FB23F" }}
+            >
+              M
+            </motion.h1>
+            <motion.h1
+              style={{ fontWeight: 200 }}
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.1"
+              data-scroll-speed="4"
+            >
+              E
+            </motion.h1>
+            <motion.h1
+              style={{
+                fontFamily: "Kaushan Script",
+                paddingRight: "1rem",
+                color: "#00D9FF",
+              }}
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.09"
+              data-scroll-speed="4"
+            >
+              R
+            </motion.h1>
+            <motion.h1
+              style={{ paddingRight: "1.5rem", color: "#026E00" }}
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.07"
+              data-scroll-speed="4"
+            >
+              N
+            </motion.h1>
+
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.06"
+              data-scroll-speed="4"
+            >
+              Sta
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.08"
+              data-scroll-speed="4"
+            >
+              ck
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="4"
+            >
+              Dev<span style={{ marginLeft: "-1vw" }}>.</span>
+            </motion.h1>
+          </div>
+          <motion.h2 variants={item} data-scroll data-scroll-speed="2">
+            Mahmodul Hasan Santo
+          </motion.h2>
+        </Title>
+        <Img ref={animeRef}>
+          <img
+            onClick={handleDownload}
+            src={CV}
+            alt="CV"
             data-scroll
             data-scroll-delay="0.04"
             data-scroll-speed="4"
-            style={{ fontFamily: "Kaushan Script" }}
-          >
-            Loper
-          </motion.h1>
-        </div>
-        <motion.h2 variants={item} data-scroll data-scroll-speed="4">
-          Mahmodul Hasan Santo
-        </motion.h2>
-      </Title>
-      <img data-scroll data-scroll-speed="-2" src={videl} alt="" />
-      <HeaderTwo>Why Not Fullstack Dev</HeaderTwo>
-      {/* <video src={Image} autoPlay loop muted /> */}
-    </ImageContainer>
+          />
+        </Img>
+      </ImageContainer>
+    </>
   );
 };
+const Img = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+
+  & > * {
+    box-shadow: 0 2px 8px;
+    width: clamp(20vw, 22vw, 24vw);
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  @media (max-width: 1392px) {
+    display: none;
+  }
+`;
 
 export default CoverImage;

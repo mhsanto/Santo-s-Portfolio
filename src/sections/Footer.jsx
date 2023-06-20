@@ -21,15 +21,14 @@ const LogoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h2 {
-    font-size: 4.5rem;
-    @media (max-width: 48em) {
-      font-size: 1.4rem;
-    }
-    @media (max-width: 64em) {
-      font-size: 3.5rem;
-    }
+`;
+const HeaderTwo = styled.h2`
+  font-size: 4.5rem;
+  @media (max-width: 64em) {
+    font-size: 3.5rem;
+  }
+  @media (max-width: 48em) {
+    font-size: 1.4rem;
   }
 `;
 const Span = styled.span`
@@ -177,9 +176,9 @@ const Footer = () => {
         <Link4 href="mailto: nicesanto92@gmail.com" target="_blank">
           Email
         </Link4>
-        <h2 data-scroll data-scroll-speed="2">
+        <HeaderTwo data-scroll data-scroll-speed="2">
           Let's talk about your project
-        </h2>
+        </HeaderTwo>
         <Span>
           <a
             href="https://www.facebook.com/messages/t/100004883266236"
