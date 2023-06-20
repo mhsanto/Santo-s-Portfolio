@@ -4,6 +4,7 @@ const Section = styled.section`
   min-height: 100vh;
   position: relative;
   display: flex;
+  background-color: #f4effc;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -60,7 +61,7 @@ const Extra = () => {
             data-scroll-target="#container"
             data-scroll-speed="6"
           >
-            Photoshop,Shopify,Git & Github
+            SCSS,Shopify,Git & Github
           </span>
         </BannerContainer>
         <BannerContainer>
@@ -70,7 +71,7 @@ const Extra = () => {
             data-scroll-target="#container"
             data-scroll-speed="-5"
           >
-            Can Speak and understand
+            Fluent In
           </span>
         </BannerContainer>
         <BannerContainer>
@@ -100,7 +101,7 @@ const Extra = () => {
             data-scroll-target="#container"
             data-scroll-speed="-7"
           >
-            78+ word per minute
+            73+ word per minute
           </span>
         </BannerContainer>
       </Container>

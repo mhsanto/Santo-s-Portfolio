@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import gsap from "gsap";
-
 import img1 from "../assets/Images/ecommerce.png";
 import img2 from "../assets/Images/hunt.png";
 import img3 from "../assets/Images/portfolio.png";
 import img4 from "../assets/Images/reactPortfolio.png";
 import img5 from "../assets/Images/socialSiteImg.png";
-import img6 from "../assets/Images/netflix.jpg";
 import React, { useLayoutEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import styled from "styled-components";
@@ -23,12 +21,12 @@ const Title = styled.h1`
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 5rem;
+  font-size: calc(5em - 1vw);
 
   font-weight: 300;
   text-shadow: 1px 1px 1px #202020;
   font-family: "Kaushan Script";
-  color: white;
+  color: crimson;
   z-index: 8;
   @media (max-width: 64em) {
     font-size: calc(5rem-1vw);
@@ -62,7 +60,6 @@ const Flex = styled.div`
   color: ${(props) => props.theme.text};
   font-size: 0.95rem;
   h3 {
-    font-size: 0.98rem;
     font-weight: 300;
   }
   @media (max-width: 64em) {
@@ -92,7 +89,6 @@ const Tag = styled(motion.a)`
 `;
 const Right = styled.div`
   position: absolute;
-
   background-color: #566270;
   /* width: 65%; */
   left: 35%;
@@ -133,9 +129,7 @@ const Item = styled(motion.div)`
 const ImageHover = styled(motion.div)`
   height: 30rem;
   overflow: hidden;
-  @media (max-width: 30em) {
-    height: 27.5rem;
-  }
+  border: 1px solid rgb(255, 121, 79);
 `;
 const Img = styled(motion.img)`
   width: 100%;
@@ -162,55 +156,45 @@ const Project = ({ img, href, title = "" }) => {
 const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
-
-  const Horizontalref = useRef(null);
-
+  const horizontalRef = useRef(null);
   useLayoutEffect(() => {
-    let element = ref.current;
-
-    let scrollingElement = Horizontalref.current;
-
+    let scrollingElement = horizontalRef.current;
     let pinWrapWidth = scrollingElement.offsetWidth;
+    let element = ref.current;
     let t1 = gsap.timeline();
-
     setTimeout(() => {
       t1.to(element, {
         scrollTrigger: {
           trigger: element,
           start: "top top",
-          end: `${pinWrapWidth} bottom`,
-          scroller: ".App", //locomotive-scroll
-          scrub: 1,
+          end: pinWrapWidth,
+          scrub: true,
           pin: true,
-          // markers: true,
-          // anticipatePin: 1,
+          scroller: ".App",
+          //   markers: true,
         },
         height: `${scrollingElement.scrollWidth}px`,
-        ease: "none",
+        ease: "none,",
       });
-
       t1.to(scrollingElement, {
         scrollTrigger: {
           trigger: scrollingElement,
           start: "top top",
-          end: `${pinWrapWidth} bottom`,
-          scroller: ".App", //locomotive-scroll
-          scrub: 1,
-          // markers: true,
+          end: pinWrapWidth,
+          scrub: true,
+          scroller: ".App",
+          //   markers: true,
         },
         x: -pinWrapWidth,
-
-        ease: "none",
+        ease: "none,",
       });
       ScrollTrigger.refresh();
     }, 1000);
-    ScrollTrigger.refresh();
-
     return () => {
       t1.kill();
       ScrollTrigger.kill();
     };
-  }, []);
+  });
   return (
     <Section ref={ref} id="projects">
       <Title data-scroll data-scroll-speed="-1">
@@ -227,20 +211,6 @@ const Projects = () => {
                 fontWeight: "700",
               }}
               href="https://mhsanto.github.io/E-commerce-website/"
-              target="_blank"
-            >
-              View Live Demo
-            </Tag>
-          </div>
-          <div data-scroll>
-            <h3>2.Netflix Clone Using React,Firebase,Node,Mongo,Express</h3>
-            <Tag
-              whileHover={{
-                backgroundColor: "white",
-                color: "#202020",
-                fontWeight: "700",
-              }}
-              href="https://clone-netflix-clone.netlify.app"
               target="_blank"
             >
               View Live Demo
@@ -306,16 +276,11 @@ const Projects = () => {
           </div>
         </Flex>
       </Left>
-      <Right ref={Horizontalref}>
+      <Right ref={horizontalRef}>
         <Project
           img={img1}
           title="view my work"
           href="https://mhsanto.github.io/E-commerce-website/"
-        />
-        <Project
-          img={img6}
-          title="view my work"
-          href="https://clone-netflix-clone.netlify.app"
         />
         <Project
           img={img2}
