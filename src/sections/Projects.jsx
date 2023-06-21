@@ -23,10 +23,11 @@ const Title = styled.h1`
   left: 1rem;
   font-size: calc(5em - 1vw);
 
-  font-weight: 300;
+  font-weight: 00;
   text-shadow: 1px 1px 1px #202020;
-  font-family: "Kaushan Script";
-  color: crimson;
+  font-family: var(--river-font);
+  font-size: 6rem;
+  color: white;
   z-index: 8;
   @media (max-width: 64em) {
     font-size: calc(5rem-1vw);

@@ -13,7 +13,7 @@ const Section = styled.section`
   align-items: center;
   background-color: #000000;
   color: #f2ff91;
-  font-family: "Roboto";
+  /* font-family: "Roboto"; */
   text-transform: uppercase;
 `;
 const LogoContainer = styled.div`
@@ -23,6 +23,7 @@ const LogoContainer = styled.div`
   align-items: center;
 
   h2 {
+    font-family: var(--river-font);
     font-size: clamp(1.38rem, calc(-0.17rem + 5.15vw), 4.5rem);
   }
 `;

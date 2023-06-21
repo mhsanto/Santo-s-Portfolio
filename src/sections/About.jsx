@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import cv from "../assets/Images/Santo-CV.pdf";
+import cv from "../assets/Images/CV.pdf";
 import img2 from "../assets/Images/me.jpg";
 import img3 from "../assets/Images/santo.jpg";
 import { motion } from "framer-motion";
@@ -23,9 +23,9 @@ const About = () => {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    font-size: 10rem;
-    font-weight: 300;
-    font-family: "Kaushan Script";
+    font-size: 7rem;
+    font-weight: 700;
+    font-family: var(--river-font);
     z-index: 4;
     @media (max-width: 64em) {
       font-size: calc(5em - 1vw);
@@ -124,7 +124,7 @@ const About = () => {
       >
         About Me
       </Title>
-      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-text">
+      <Left data-scroll>
         My full name is Mahmodul Hasan Santo.I am a passionate designer based in
         Dhaka,Bangladesh.I am enthusiastic about learning,working hard and
         solving problems with a clean and functional design.

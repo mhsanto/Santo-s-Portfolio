@@ -36,43 +36,17 @@ const CoverImage = () => {
     }
     h2 {
       text-align: center;
-      font-family: "Kaushan Script";
+      font-family: var(--river-font);
       text-shadow: 1px 1px 1px #202020;
       font-size: clamp(1.75rem, calc(1.38rem + 1.24vw), 2.5rem);
-      color: crimson;
+      font-weight: 600;
       @media (max-width: 30em) {
         font-size: calc(1rem + 2.2vw);
         object-position: center;
       }
     }
   `;
-  const HeaderTwo = styled.span`
-    font-size: 1.82rem;
-    position: absolute;
-    top: 5rem;
-    left: 25rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #999ea8;
-    width: 18rem;
-    height: 5rem;
-    padding: 1rem 1rem;
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 75%,
-      38% 75%,
-      9% 100%,
-      26% 75%,
-      0% 75%
-    );
-    @media (max-width: 40em) {
-      font-size: 1rem;
-      width: 8rem;
-      height: 4rem;
-      top: 25rem;
-      left: 12rem;
-    }
-  `;
+
   const container = {
     hidden: {
       opacity: 0,
@@ -106,7 +80,7 @@ const CoverImage = () => {
             data-scroll-delay="0.13"
             data-scroll-speed="4"
           >
-            Fro
+            M
           </motion.h1>
           <motion.h1
             variants={item}
@@ -114,7 +88,7 @@ const CoverImage = () => {
             data-scroll-delay="0.1"
             data-scroll-speed="4"
           >
-            nt
+            E
           </motion.h1>
           <motion.h1
             variants={item}
@@ -122,34 +96,40 @@ const CoverImage = () => {
             data-scroll-delay="0.09"
             data-scroll-speed="4"
           >
-            End
+            R
           </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.09"
+            data-scroll-speed="4"
+          >
+            N
+          </motion.h1>
+          &nbsp; &nbsp;
           <motion.h1
             variants={item}
             data-scroll
             data-scroll-delay="0.06"
             data-scroll-speed="4"
-            style={{ fontFamily: "Kaushan Script" }}
           >
-            De
+            St
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
             data-scroll-delay="0.08"
             data-scroll-speed="4"
-            style={{ fontFamily: "Kaushan Script" }}
           >
-            ve
+            ack
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
             data-scroll-delay="0.04"
             data-scroll-speed="4"
-            style={{ fontFamily: "Kaushan Script" }}
           >
-            Loper
+            Dev.
           </motion.h1>
         </div>
         <motion.h2 variants={item} data-scroll data-scroll-speed="4">
