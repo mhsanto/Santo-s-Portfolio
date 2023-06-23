@@ -9,11 +9,11 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  font-family: var(--river-font);
+  font-weight: 700;
   align-items: center;
   background-color: #000000;
   color: #f2ff91;
-  /* font-family: "Roboto"; */
   text-transform: uppercase;
 `;
 const LogoContainer = styled.div`
@@ -23,12 +23,12 @@ const LogoContainer = styled.div`
   align-items: center;
 
   h2 {
-    font-family: var(--river-font);
     font-size: clamp(1.38rem, calc(-0.17rem + 5.15vw), 4.5rem);
   }
 `;
 const Span = styled.span`
   font-size: 1.2rem;
+  font-family: "UEFAPlaystrong";
   border: 1px solid;
   padding: 1rem 2rem;
   border-radius: 30px;
@@ -78,6 +78,7 @@ const FooterLinks = styled(motion.div)`
 const Link = styled.a`
   position: absolute;
   font-size: 1rem;
+
   text-transform: uppercase;
   font-weight: 700;
   left: 1rem;
@@ -92,6 +93,7 @@ const Link2 = styled.a`
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
+
   right: 1rem;
   border-bottom: 2px solid;
   top: 1rem;
@@ -102,6 +104,7 @@ const Link2 = styled.a`
 const Link3 = styled.a`
   position: absolute;
   bottom: 2.5rem;
+
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -119,11 +122,13 @@ const Link4 = styled.a`
   bottom: 2.5rem;
   border-bottom: 2px solid;
   right: 1rem;
+
   @media (max-width: 48em) {
     font-size: 1rem;
   }
 `;
 const Copyright = styled.span`
+  font-family: "UEFAPlaystrong";
   padding: 0.5rem 0;
   margin: 0 4rem;
   display: flex;

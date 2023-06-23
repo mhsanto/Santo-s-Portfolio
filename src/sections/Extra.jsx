@@ -25,10 +25,10 @@ const Container = styled.div`
 `;
 const BannerContainer = styled.h1`
   font-size: 5rem;
-  font-family: "Kaushan Script";
+
   color: white;
   white-space: nowrap;
-  text-transform: uppercase;
+  text-transform: lowercase;
   line-height: 1;
 
   @media (max-width: 70em) {
@@ -61,7 +61,7 @@ const Extra = () => {
             data-scroll-target="#container"
             data-scroll-speed="6"
           >
-            SCSS,Shopify,Git & Github
+            ANIMEJS,Shopify,Git & Github
           </span>
         </BannerContainer>
         <BannerContainer>
@@ -71,7 +71,7 @@ const Extra = () => {
             data-scroll-target="#container"
             data-scroll-speed="-5"
           >
-            Fluent In
+            CAN speak and understand
           </span>
         </BannerContainer>
         <BannerContainer>
@@ -101,7 +101,7 @@ const Extra = () => {
             data-scroll-target="#container"
             data-scroll-speed="-7"
           >
-            73+ word per minute
+            77+ word per minute
           </span>
         </BannerContainer>
       </Container>

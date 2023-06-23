@@ -8,8 +8,10 @@ import Bootstrap from "../assets/Images/bootstrap.png";
 import Javascript from "../assets/Images/javascriptBIg.png";
 import ReactJs from "../assets/Images/ReactBig.png";
 import Redux from "../assets/Images/redux-icon.png";
+import Mongo from "../assets/Images/mongo.png";
+import Node from "../assets/Images/node.png";
+import Express from "../assets/Images/express.png";
 import SAAS from "../assets/Images/sass-1.svg";
-import GSAP from "../assets/Images/gsap-greensock.svg";
 import Materialui from "../assets/Images/Materialui.png";
 const Section = styled.section`
   min-height: 100vh;
@@ -53,7 +55,8 @@ const Title = styled.h1`
   font-size: 7.5rem;
   font-weight: 300;
   text-shadow: 1px 1px 1px #202020;
-  font-family: "Kaushan Script";
+  font-family: var(--river-font);
+  font-weight: 600;
   color: #323232;
   z-index: 8;
   @media (max-width: 64em) {
@@ -167,9 +170,11 @@ const Skills = () => {
         <Project img={Bootstrap} title="BootStrap" />
         <Project img={Javascript} title="Javascript ES5,ES6" />
         <Project img={ReactJs} title="REACT 17" />
+        <Project img={Mongo} title="MongoDB" />
+        <Project img={Node} title="Node JS" />
+        <Project img={Express} title="Express JS" />
         <Project img={Redux} title="Redux" />
         <Project img={SAAS} title="SASS 17" />
-        <Project img={GSAP} title="GSAP 17" />
         <Project img={Materialui} title="Material UI" />
       </Container>
     </Section>

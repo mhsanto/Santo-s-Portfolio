@@ -5,9 +5,11 @@ import img2 from "../assets/Images/hunt.png";
 import img3 from "../assets/Images/portfolio.png";
 import img4 from "../assets/Images/reactPortfolio.png";
 import img5 from "../assets/Images/socialSiteImg.png";
+import netflix from "../assets/Images/netflix.jpg";
 import React, { useLayoutEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import styled from "styled-components";
+import Project from "../components/Project";
 const Section = styled.section`
   width: 100vw;
   height: 100vh;
@@ -22,7 +24,6 @@ const Title = styled.h1`
   top: 1rem;
   left: 1rem;
   font-size: calc(5em - 1vw);
-
   font-weight: 00;
   text-shadow: 1px 1px 1px #202020;
   font-family: var(--river-font);
@@ -40,6 +41,8 @@ const Title = styled.h1`
 `;
 const Left = styled.div`
   width: 35%;
+  font-family: var(--river);
+  font-size: 0.95rem;
   background-color: ${(props) => props.theme.body};
   min-height: 100vh;
   z-index: 5;
@@ -61,7 +64,8 @@ const Flex = styled.div`
   color: ${(props) => props.theme.text};
   font-size: 0.95rem;
   h3 {
-    font-weight: 300;
+    font-family: var(--river);
+    font-size: 0.94rem;
   }
   @media (max-width: 64em) {
     h3 {
@@ -106,54 +110,7 @@ const Right = styled.div`
     left: 20%;
   }
 `;
-const Item = styled(motion.div)`
-  display: inline-block;
-  width: 20rem;
-  margin-right: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 
-  a {
-    color: white;
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    font-weight: 500;
-    text-align: center;
-  }
-  @media (max-width: 48em) {
-    width: 15rem;
-  }
-`;
-const ImageHover = styled(motion.div)`
-  height: 30rem;
-  overflow: hidden;
-  border: 1px solid rgb(255, 121, 79);
-`;
-const Img = styled(motion.img)`
-  width: 100%;
-  object-fit: cover;
-  transition: 1s ease;
-`;
-const Project = ({ img, href, title = "" }) => {
-  return (
-    <Item
-      initial={{ filter: "grayscale(100%)" }}
-      whileInView={{ filter: "grayscale(0)" }}
-      transition={{ duration: 0.05 }}
-      viewport={{ once: false, amount: "all" }}
-    >
-      <ImageHover>
-        <Img whileHover={{ translate: "0 -55%" }} src={img} alt={title} />
-      </ImageHover>
-      <a href={href} target="_blank">
-        {title}
-      </a>
-    </Item>
-  );
-};
 const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
@@ -232,6 +189,20 @@ const Projects = () => {
             </Tag>
           </div>
           <div data-scroll>
+            <h3>2.Netflix Clone Using MERN and Firebase</h3>
+            <Tag
+              whileHover={{
+                backgroundColor: "white",
+                color: "#202020",
+                fontWeight: "700",
+              }}
+              href="https://clone-netflix-clone.netlify.app"
+              target="_blank"
+            >
+              View Live Demo
+            </Tag>
+          </div>
+          <div data-scroll>
             <h3>3. Responsive Portfolio Site Using HTML & CSS</h3>
             <Tag
               whileHover={{
@@ -284,15 +255,16 @@ const Projects = () => {
           href="https://mhsanto.github.io/E-commerce-website/"
         />
         <Project
+          img={netflix}
+          title="view my work"
+          href="https://clone-netflix-clone.netlify.app"
+        />
+        <Project
           img={img2}
           title="view my work"
           href="https://sajjadul011.github.io/Hunt-Potfolio/"
         />
-        <Project
-          img={img3}
-          title="view my work"
-          href="https://mhsanto.github.io/portFolioTesting/"
-        />
+
         <Project
           img={img4}
           title="view my work"
