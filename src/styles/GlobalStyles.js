@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/kaushan-script";
 import "@fontsource/sirin-stencil";
-import "@fontsource/send-flowers";
 import UEFAPlaystrong from "./fonts/UEFAPlaystrong/UEFAPlaystrong-Medium.ttf";
 import river from "./fonts/The_Rivers/The_Rivers_Regular.ttf";
 const GlobalStyles = createGlobalStyle`
