@@ -26,14 +26,14 @@ const About = () => {
     font-size: 7rem;
     font-weight: 700;
     font-family: var(--river-font);
-    z-index: 4;
+    z-index: 6;
     @media (max-width: 64em) {
       font-size: calc(5em - 1vw);
       left: 0;
       top: 0;
     }
     @media (max-width: 48em) {
-      font-size: 4rem;
+      font-size: 2.5rem;
     }
   `;
   const Left = styled.div`

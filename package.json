@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@fontsource/kaushan-script": "^4.5.10",
-    "@fontsource/roboto": "^4.5.8",
     "@fontsource/sirin-stencil": "^4.5.8",
     "framer-motion": "^7.6.19",
     "gsap": "^3.11.3",
@@ -18,8 +17,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-locomotive-scroll": "^0.2.2",
+    "react-particles": "^2.10.1",
     "react-router-dom": "^6.4.5",
-    "styled-components": "^5.3.6"
+    "styled-components": "^6.0.0-rc.6",
+    "tsparticles": "^2.10.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

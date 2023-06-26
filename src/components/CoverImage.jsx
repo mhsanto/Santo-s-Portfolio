@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import ParticlesBackground from "./ParticlesBackground";
 
 const CoverImage = () => {
   const ImageContainer = styled.section`
     height: 100vh;
     width: 100%;
     position: relative;
-    background-color: #999ea8;
-    color: #000000;
+    background-image: linear-gradient(
+      to bottom in oklab,
+      oklch(70% 0.5 340) -10% -10%,
+      oklch(90% 0.5 200) 141% 141%
+    );
+    color: rgb(206, 206, 204);
   `;
-  const DarkOverlay = styled.div`
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.1);
-  `;
+
   const Title = styled(motion.div)`
     position: absolute;
     inset: 0;
@@ -27,19 +27,17 @@ const CoverImage = () => {
       display: flex;
     }
     h1 {
-      font-size: clamp(3rem, calc(1.22rem + 5.94vw), 6.6rem);
-      text-shadow: 1px 1px 1px #202020;
-
+      font-size: clamp(2.5rem, calc(1.22rem + 5.94vw), 6.6rem);
       @media (max-width: 30em) {
         object-position: center;
       }
     }
     h2 {
       text-align: center;
-      font-family: var(--river-font);
+      font-family: var(--kaushan-font);
       text-shadow: 1px 1px 1px #202020;
       font-size: clamp(1.75rem, calc(1.38rem + 1.24vw), 2.5rem);
-      font-weight: 600;
+      font-weight: 400;
       @media (max-width: 30em) {
         font-size: calc(1rem + 2.2vw);
         object-position: center;
@@ -71,7 +69,7 @@ const CoverImage = () => {
   };
   return (
     <ImageContainer>
-      <DarkOverlay />
+      <ParticlesBackground />
       <Title variants={container} initial="hidden" animate="visible">
         <div>
           <motion.h1

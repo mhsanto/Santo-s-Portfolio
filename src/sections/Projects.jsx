@@ -23,20 +23,16 @@ const Title = styled.h1`
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: calc(5em - 1vw);
+  font-size: clamp(3.5rem, calc(2.61rem + 3.74vw), 6rem);
   font-weight: 00;
   text-shadow: 1px 1px 1px #202020;
   font-family: var(--river-font);
-  font-size: 6rem;
+
   color: white;
   z-index: 8;
   @media (max-width: 64em) {
-    font-size: calc(5rem-1vw);
     left: 0;
     top: 0;
-  }
-  @media (max-width: 48em) {
-    font-size: 3rem;
   }
 `;
 const Left = styled.div`

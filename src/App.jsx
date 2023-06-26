@@ -12,6 +12,7 @@ import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Extra from "./sections/Extra";
 import Skills from "./sections/Skills";
 import Footer from "./sections/Footer";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
   const containerRef = useRef(null);
