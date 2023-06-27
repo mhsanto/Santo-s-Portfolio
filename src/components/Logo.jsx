@@ -23,9 +23,13 @@ const Title = styled(motion.span)`
   max-width: 85%;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 40em) {
+  @media (max-width: 48em) {
     padding: 0.5rem 1.5rem;
     font-size: 1.99rem;
+  }
+  @media (max-width: 30em) {
+    padding: 0.5rem 1rem;
+    font-size: 1.4333333333333333333333333333rem;
   }
 `;
 

@@ -12,7 +12,6 @@ import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Extra from "./sections/Extra";
 import Skills from "./sections/Skills";
 import Footer from "./sections/Footer";
-import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
   const containerRef = useRef(null);
@@ -24,19 +23,19 @@ function App() {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
+            multiplier: 1.0,
             smartphone: {
               smooth: true,
-              multiplier: 3,
               touchMultiplier: 3,
             },
             tablet: {
-              touchMultiplier: 3,
+              touchMultiplier: 2,
               smooth: true,
             },
           }}
           watch={
             [
-              //..all the dependencies you want to watch to update the scroll.
+              //..all the dependencies you want to watch to update scroll.
               //  Basicaly, you would want to watch page/location changes
               //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
             ]

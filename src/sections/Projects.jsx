@@ -23,11 +23,10 @@ const Title = styled.h1`
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: clamp(3.5rem, calc(2.61rem + 3.74vw), 6rem);
+  font-size: clamp(2rem, calc(2rem + 1.5vw), 6rem);
   font-weight: 00;
   text-shadow: 1px 1px 1px #202020;
   font-family: var(--river-font);
-
   color: white;
   z-index: 8;
   @media (max-width: 64em) {
