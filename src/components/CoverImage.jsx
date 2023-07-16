@@ -12,7 +12,7 @@ const CoverImage = () => {
       oklch(70% 0.5 340) -10% -10%,
       oklch(90% 0.5 200) 141% 141%
     );
-    color: rgb(206, 206, 204);
+    color: #fff;
   `;
 
   const Title = styled(motion.div)`

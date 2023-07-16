@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import restauntImage from "../assets/Images/restaurantSite.png";
 import img1 from "../assets/Images/ecommerce.png";
 import img2 from "../assets/Images/hunt.png";
 import img3 from "../assets/Images/portfolio.png";
@@ -156,7 +157,24 @@ const Projects = () => {
       <Left>
         <Flex>
           <div data-scroll>
-            <h3>1. Concept E-Commerce Site Using BootStrap</h3>
+            <h3>
+              1. A Restaurant Site using
+              React,Redux,Firebase,React-Router-Dom,React-Form,Styled-Components,Yup
+            </h3>
+            <Tag
+              whileHover={{
+                backgroundColor: "white",
+                color: "#202020",
+                fontWeight: "700",
+              }}
+              href="https://santo-react-restaurant.netlify.app/"
+              target="_blank"
+            >
+              View Live Demo
+            </Tag>
+          </div>
+          <div data-scroll>
+            <h3>2. Concept E-Commerce Site Using BootStrap</h3>
             <Tag
               whileHover={{
                 backgroundColor: "white",
@@ -170,7 +188,7 @@ const Projects = () => {
             </Tag>
           </div>
           <div data-scroll>
-            <h3>2. PSD to HTML Converted Site (not responsive)</h3>
+            <h3>3. PSD to HTML Converted Site (not responsive)</h3>
             <Tag
               whileHover={{
                 backgroundColor: "white",
@@ -184,7 +202,7 @@ const Projects = () => {
             </Tag>
           </div>
           <div data-scroll>
-            <h3>2.Netflix Clone Using MERN and Firebase</h3>
+            <h3>4.Netflix Clone Using MERN and Firebase</h3>
             <Tag
               whileHover={{
                 backgroundColor: "white",
@@ -198,7 +216,7 @@ const Projects = () => {
             </Tag>
           </div>
           <div data-scroll>
-            <h3>3. Responsive Portfolio Site Using HTML & CSS</h3>
+            <h3>5. Responsive Portfolio Site Using HTML & CSS</h3>
             <Tag
               whileHover={{
                 backgroundColor: "white",
@@ -212,7 +230,7 @@ const Projects = () => {
             </Tag>
           </div>
           <div data-scroll>
-            <h3>4. Responsive Portfolio Using React</h3>
+            <h3>6. Responsive Portfolio Using React</h3>
             <Tag
               whileHover={{
                 backgroundColor: "white",
@@ -226,7 +244,7 @@ const Projects = () => {
           </div>
           <div data-scroll>
             <h3>
-              5. Responsive Concept Social Media Site Using HTML,CSS &
+              7. Responsive Concept Social Media Site Using HTML,CSS &
               Javascript
             </h3>
             <Tag
@@ -244,6 +262,11 @@ const Projects = () => {
         </Flex>
       </Left>
       <Right ref={horizontalRef}>
+        <Project
+          img={restauntImage}
+          title="view my work"
+          href="https://santo-react-restaurant.netlify.app/"
+        />
         <Project
           img={img1}
           title="view my work"
