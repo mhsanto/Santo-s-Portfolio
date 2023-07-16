@@ -4,7 +4,10 @@ import "@fontsource/sirin-stencil";
 import UEFAPlaystrong from "./fonts/UEFAPlaystrong/UEFAPlaystrong-Medium.ttf";
 import river from "./fonts/The_Rivers/The_Rivers_Regular.ttf";
 const GlobalStyles = createGlobalStyle`
-
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+}
 @font-face {
   font-family: "UEFAPlaystrong";
   src: url(${UEFAPlaystrong});
@@ -20,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
 body {
   font-family: "UEFAPlaystrong";
 
-
+  overflow-X:hidden;
   line-height: 1.5;
 }
 .ball {
@@ -36,14 +39,8 @@ body {
 }
 
 
-*,*::after,*::before{
-    padding: 0;
-    margin: 0;
-}
-body{
- 
-    overflow-X:hidden;
-}
+
+
 h1,h2,h3,h4,h5{
     padding: 0;
     margin: 0;

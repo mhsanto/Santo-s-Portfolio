@@ -26,6 +26,8 @@ function App() {
             multiplier: 1.0,
             smartphone: {
               smooth: true,
+              multiplier: 3.0,
+
               touchMultiplier: 3,
             },
             tablet: {
