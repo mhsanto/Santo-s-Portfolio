@@ -33,13 +33,6 @@ function App() {
               smooth: true,
             },
           }}
-          watch={
-            [
-              //..all the dependencies you want to watch to update scroll.
-              //  Basicaly, you would want to watch page/location changes
-              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-            ]
-          }
           containerRef={containerRef}
         >
           <ScrollTriggerProxy />
