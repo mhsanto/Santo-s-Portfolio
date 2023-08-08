@@ -71,11 +71,8 @@ const Flex = styled.div`
       display: none;
     }
   }
-  @media (max-width: 48em) {
-    width: 40%;
-    h3 {
-      display: none;
-    }
+  @media (max-width: 68em) {
+    display: none;
   }
 `;
 const Tag = styled(motion.a)`
