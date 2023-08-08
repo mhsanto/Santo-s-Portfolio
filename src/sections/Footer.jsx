@@ -24,6 +24,7 @@ const LogoContainer = styled.div`
 
   h2 {
     font-size: clamp(1.38rem, calc(-0.17rem + 5.15vw), 4.5rem);
+    text-align: center;
   }
 `;
 const Span = styled.span`
@@ -168,8 +169,8 @@ const Footer = () => {
         <Link href="https://github.com/mhsanto" target="_blank">
           GitHub
         </Link>
-        <Link2 href="https://www.instLink2gram.com/mhsanto92/" target="_blank">
-          Instagram
+        <Link2 href="https://www.linkedin.com/in/mh-santo/" target="_blank">
+          Linkedin
         </Link2>
         <Link3 href="https://www.facebook.com/mhsanto072" target="_blank">
           Facebook

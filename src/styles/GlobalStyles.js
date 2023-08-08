@@ -22,7 +22,6 @@ const GlobalStyles = createGlobalStyle`
 }
 body {
   font-family: "UEFAPlaystrong";
-
   overflow-X:hidden;
   line-height: 1.5;
 }

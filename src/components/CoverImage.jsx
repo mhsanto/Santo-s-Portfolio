@@ -7,11 +7,6 @@ const CoverImage = () => {
     height: 100vh;
     width: 100%;
     position: relative;
-    background-image: linear-gradient(
-      to bottom in oklab,
-      oklch(70% 0.5 340) -10% -10%,
-      oklch(90% 0.5 200) 141% 141%
-    );
     color: #fff;
   `;
 
@@ -23,8 +18,14 @@ const CoverImage = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    div {
+    .title_name {
       display: flex;
+      @media (max-width: 25em) {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
     }
     h1 {
       font-size: clamp(2.5rem, calc(1.22rem + 5.94vw), 6.6rem);
@@ -39,7 +40,7 @@ const CoverImage = () => {
       font-size: clamp(1.75rem, calc(1.38rem + 1.24vw), 2.5rem);
       font-weight: 400;
       @media (max-width: 30em) {
-        font-size: calc(1rem + 2.2vw);
+        font-size: clamp(1.75rem, calc(1.38rem + 1.24vw), 2.5rem);
         object-position: center;
       }
     }
@@ -71,63 +72,65 @@ const CoverImage = () => {
     <ImageContainer>
       <ParticlesBackground />
       <Title variants={container} initial="hidden" animate="visible">
-        <div>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.13"
-            data-scroll-speed="4"
-          >
-            M
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.1"
-            data-scroll-speed="4"
-          >
-            E
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.09"
-            data-scroll-speed="4"
-          >
-            R
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.09"
-            data-scroll-speed="4"
-          >
-            N
-          </motion.h1>
+        <div className="title_name">
+          <div style={{ display: "flex" }}>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.13"
+              data-scroll-speed="4"
+            >
+              F
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.1"
+              data-scroll-speed="4"
+            >
+              r
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.09"
+              data-scroll-speed="4"
+            >
+              o
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.09"
+              data-scroll-speed="4"
+            >
+              n
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.06"
+              data-scroll-speed="4"
+            >
+              t
+            </motion.h1>
+            <motion.h1
+              variants={item}
+              data-scroll
+              data-scroll-delay="0.08"
+              data-scroll-speed="4"
+            >
+              end
+            </motion.h1>
+          </div>
           &nbsp; &nbsp;
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.06"
-            data-scroll-speed="4"
-          >
-            St
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            data-scroll
-            data-scroll-delay="0.08"
-            data-scroll-speed="4"
-          >
-            ack
-          </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
             data-scroll-delay="0.04"
             data-scroll-speed="4"
           >
-            Dev.
+            Developer
           </motion.h1>
         </div>
         <motion.h2 variants={item} data-scroll data-scroll-speed="4">
